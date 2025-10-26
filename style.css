@@ -1,21 +1,255 @@
+/* Di file style.css */
+.welcome-message {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: -10px; /* Sesuaikan sesuai kebutuhan layout Anda */
+    margin-bottom: 15px; /* Tambahkan sedikit ruang di bawah pesan */
+}
+/* Styling dasar untuk seluruh halaman */
 body {
-    background-color: #FFFFE0; /* Warna kuning cerah */
-    font-family: Arial, sans-serif; /* Jenis huruf yang bersih dan mudah 
-    color: #191970; /* Warna teks utama (Biru Gelap) */ 
-} 
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Latar belakang abu-abu muda */
+    display: flex;
+    justify-content: center; /* Posisikan kartu di tengah horizontal */
+    align-items: center; /* Posisikan kartu di tengah vertikal */
+    min-height: 100vh;
+    margin: 0;
+}
 
-.kartu-profil { 
-    width: 300px; 
-    margin: 50px auto;/ 
-    padding: 20px:
-    background-color: white; 
-    border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1); 
-    text-align: center;/*
-} 
+/* Styling utama Kartu Profil */
+.profile-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px; /* Sudut membulat */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    width: 100%;
+    max-width: 350px; /* Batasan lebar kartu */
+    text-align: center;
+}
+
+/* Styling Gambar Profil */
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    object-fit: cover;
+    border: 5px solid #F08080; /* Border feminin (pink muda) */
+    margin-bottom: 15px;
+}
+
+/* Styling Teks (Nama) */
+.profile-name {
+    margin: 10px 0 5px 0;
+    color: #333;
+    font-size: 1.8em;
+}
+
+/* Styling untuk Tombol Aksi Utama (kelas .btn) - Asumsi ini sudah ada */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px; /* Bentuk tombol melengkung */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    cursor: pointer;
+}
+
+/* ----------------------------- */
+/* STYLING UNTUK SECONDARY BUTTON */
+/* ----------------------------- */
+
+/* Gaya dasar untuk tombol sekunder */
+.secondary-btn {
+    /* Mengambil properti dari .btn agar konsisten */
+    background-color: transparent; /* Latar belakang transparan */
+    color: #333; /* Warna teks gelap */
+    border: 2px solid #ccc; /* Border abu-abu tipis (Outline style) */
+}
+
+/* Efek hover untuk tombol sekunder */
+.secondary-btn:hover {
+    background-color: #f0f0f0; /* Latar belakang sedikit abu-abu saat di-hover */
+    color: #333;
+    border-color: #999;
+}
+
+/* Jika Anda ingin tombol sekunder memiliki warna latar belakang berbeda */
+/*
+.secondary-btn {
+    background-color: #f0f0f0; 
+    color: #333; 
+    border: 2px solid #f0f0f0; 
+}
+.secondary-btn:hover {
+    background-color: #ddd; 
+}
 
 
-.kartu-profil img { 
-     width: 150px; 
-     border-radius: 50%; /* 
-} 
+/* ================================== */
+/* STYLING UNTUK HALAMAN TENTANG SAYA */
+/* ================================== */
+
+/* Container Utama */
+.about-container {
+    max-width: 800px; /* Lebar maksimal halaman */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Tambahkan animasi */
+}
+
+/* Header/Navbar Sederhana */
+.navbar {
+    background-color: #f8f8f8;
+    padding: 15px 0;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.nav-brand {
+    text-decoration: none;
+    color: #007bff; /* Warna biru */
+    font-weight: bold;
+    padding-left: 20px;
+}
+.nav-brand:hover {
+    color: #0056b3;
+}
+
+/* Bagian Atas/Hero Section */
+.hero-section {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.profile-photo-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #007bff; /* Border menonjol */
+}
+
+.main-heading {
+    font-size: 2.5em;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.sub-heading {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+/* Bagian Konten */
+.content-section {
+    padding-top: 20px;
+}
+
+.section-title {
+    color: #007bff;
+    font-size: 1.8em;
+    margin-top: 30px;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+}
+
+.about-text {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Daftar Keahlian */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #e9f5ff;
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.skills-list li i {
+    margin-right: 5px;
+}
+
+/* Link Sosial di Halaman Tentang Saya */
+.social-links-about {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links-about a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.social-links-about a:hover {
+    color: #007bff;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Styling Tombol (.btn) */
+.btn {
+    display: inline-block; /* Penting agar padding dan margin bekerja */
+    padding: 12px 28px; /* Ukuran tombol */
+    margin-top: 15px;
+    
+    /* Tampilan Fisik */
+    background-color: #007bff; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+    border: none;
+    border-radius: 25px; /* Membuat tombol berbentuk pil */
+    
+    /* Teks */
+    text-decoration: none; /* Menghilangkan garis bawah tautan */
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    
+    /* Efek Hover */
+    transition: background-color 0.3s ease, transform 0.2s; /* Transisi halus */
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+.btn:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat di-hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+}
+
+/* Di file style.css Anda */
+ 
+.about-text {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+    /* >>> PENAMBAHAN KODE UNTUK MEMBUAT TULISAN RATA KIRI-KANAN */
+    text-align: justify; 
+    /* <<< */
+}
